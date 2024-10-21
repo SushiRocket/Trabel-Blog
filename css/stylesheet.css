@@ -58,4 +58,38 @@ widthとheightで線の長さと高さを設定
     background-color: aqua;
     transition: all 200ms ease;
 }
+/*
+ホバー時の下線の設定
+「opacity: 0;」下線を非表示
+「transform: translateY(3px);」下に3px移動
+→下に3px移動しながら下線を非表示にする
+----------------------------------------*/
+.readmore a:hover::after {
+    opacity: 0;
+    transform: translateY(3px);
+}
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+}
+#header .site-titel {
+    padding: 20px 16px;
+    line-height: 1px;
+}
+/*
+「display: inline-block;」でリンクを親要素の範囲に広げる
+※blockを指定すると横幅いっぱいまで広がってしまうため、
+inline-blockを設定している
+*/
+#header a {
+    display: inline-block;
+}
+#navi {
+    background-color: #333;
 }
